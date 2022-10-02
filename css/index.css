@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+:root{
+    --Red-Hat:'Red Hat Display', sans-serif;
+
+
+
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+main{
+    background-image:url("../assets/pattern-background-desktop.svg");
+    background-size: 100% 60%, cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-color: var(--Pale-blue);
+    padding: 6.25rem 0.625rem;
+}
+
+
+.card{
+    max-width:fit-content;
+    margin: auto;
+    border-radius: 1.5625rem;
+    background-color: var(--Very-pale-blue);
+    text-align: center;
+    font-family: var(--Red-Hat);
+    padding: 0 0 3.125rem;
+}
+
+
+.card__img{
+    width: 100%;
+    margin: auto;
+    display: block;
+    border-radius: 1.5625rem 1.5625rem 0 0;
+}
+
+
+.card__title{
+    margin-top: 3.125rem;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--Dark-blue);
+}
+
+
+.card__paragraf{
+    margin: auto;
+    margin-top: 1.875rem;
+    max-width: 18.75rem;
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+}
+
+
+.card__content__items{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 1.875rem;
+    align-items: center;
+    background-color: #f0f4ff;
+    padding: 1.5625rem 0.9375rem;
+    border-radius: 0.9375rem;
+}
+
+
+.card__content__plan{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+.card__content__plan > img {
+    margin-right: 0.9375rem;
+}
+
+
+.card__content__text__plan{
+    font-size: .8rem;
+    color: var(--Dark-blue);
+    text-align: left;
+}
+
+.card__content__price{
+    font-size: .9rem;
+    color: var(--Desaturated-blue);
+}
+
+.card__change{
+    color: var(--Bright-blue);
+}
+
+.card__change:hover{
+    color: hsl(245, 100%, 67%);
+    text-decoration: none;
+}
+
+.card__pay{
+    margin: auto;
+    margin-top: 2.5rem;
+    padding: 0.9375rem 0;
+    width: 80%;
+    border-radius: 0.625rem;
+    border: none;
+    background-color: var(--Bright-blue);
+    color: white;
+    font-size: .9rem;
+    font-weight: 700;
+    box-shadow: 0rem 0.625rem 1.5625rem rgb(167, 167, 167);
+    cursor: pointer;
+}
+
+
+.card__pay:hover{
+    background-color: hsl(245, 100%, 65%);
+}
+
+
+
+.card__cancel{
+    margin-top: 2.5rem;
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+    font-size: .9rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Very-pale-blue);
+}
+
+
+.card__cancel:hover{
+    color: var(--Dark-blue);
+}
+
+
+
+
+@media (max-width:400px) {
+    main{
+        background-image: url("../assets/pattern-background-mobile.svg");
+        padding: 6.25rem 1.25rem;
+    }
+
+    .card__annual{
+        font-size: .9rem;
+    }
+
+    .card__paragraf{
+        font-size: .9rem;
+    }
+}
